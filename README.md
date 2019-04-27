@@ -1,4 +1,4 @@
-# Safe Space - Team Vulnerable Populations
+# Bushra - Team Vulnerable Populations
 ## NYU AD hackathon for the Social Good 2019**
 
 Team name: Bushra - بشرى
