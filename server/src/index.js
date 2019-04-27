@@ -1,28 +1,23 @@
 const config = require('config');
 
-// -- Instantiate assistant --
-const AssistantV1 = require('ibm-watson/assistant/v1');
-
-const assistant = new AssistantV1({
-  version:    config.get('watson.version'),
-  iam_apikey: config.get('watson.apiKey'),
-  url:        config.get('watson.url')
-});
-
+const assistant = require('./assistant');
 
 // -- Instantiate app --
 const express = require('express');
-const app = express();
+const app     = express();
+
+app.use(express.json());
 
 app.get('/', async (req, res) => {
-  const msg = await assistant.message({
-    workspace_id: config.get('watson.workspaceId'),
-    input:        {text: "What's my balance?"}
-  });
+  const msg = await assistant.query('what is my balance?');
   console.log(JSON.stringify(msg));
   res.json(msg);
 });
 
+app.post('/message', async (req, res) => {
+  const msg = await assistant.query(req.body.message);
+  res.json(msg);
+});
 
 // -- Start server --
 const PORT = config.get('port');
