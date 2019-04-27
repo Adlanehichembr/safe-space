@@ -1,9 +1,10 @@
 # Safe Space - Team Vulnerable Populations
 ## NYU AD hackathon for the Social Good 2019**
 
-Team name:
+Team name: Bushra - Safe Space  -  بشرى
 
-Description:
+Description: To provide victims of domestic abuse an anonymous AI powered assistant for legal and emotional support.
+
 
 
 Mentors:
