@@ -8,6 +8,10 @@ const app     = express();
 
 app.use(express.json());
 
+app.get('/ping', (req, res) => {
+  res.json({ping: 'pong'});
+});
+
 app.post('/message', async (req, res) => {
   const msg = await assistant.query(req.body.context || {}, req.body.message);
   res.json(msg);
