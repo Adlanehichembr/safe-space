@@ -5,12 +5,12 @@ Team name: Bushra - Safe Space  -  بشرى
 
 Description: To provide victims of domestic abuse an anonymous AI powered assistant for legal and emotional support.
 
-
+<img src=./boushra-logo.png height="100px"/>
 
 Mentors:
  * Alaa El Hariri,  alaa.elhariri@hedgeguard.com, Hedgeguard, Lebanon
  * Fabricio Pontes Harsich, fabriph@gmail.com,  Google, Argentina / USA
- 
+
 
 Students:
  * Adlane Hichem Briki,  briki.adlanehichem@gmail.com, Algeria, University of M'hamed Bougara
