@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+ <div>
+    <h2>Send-Request,Recive-Response for any free online service</h2>
+    
+  </div>
+  
+	
+<script src="../ny/js/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+ 
+
+   $.ajax({ 
+    type: 'GET', 
+    url: 'http://dummy.restapiexample.com/api/v1/employees', 
+    //data: { get_param: 'value' }, 
+    dataType: 'json',
+    success: function (data) { 
+        $.each(data, function(index, element) {
+            $('body').append($('<div>', {
+                text: element.employee_name
+            }));
+        });
+    }
+});
+
+    
+  </script>
+</body>
+</html>
+	
+
+</script>
+
+</body>
+</html>
