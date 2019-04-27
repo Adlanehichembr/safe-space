@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+.c-0  {position: absolute; left: 0;}
+.c-1  {position: absolute; left: 8.33%;}
+.c-2  {position: absolute; left: 16.66%;}
+.c-3  {position: absolute; left: 25%;}
+.c-4  {position: absolute; left: 33.33%;}
+.c-5  {position: absolute; left: 41.66%;}
+.c-6  {position: absolute; left: 50%;}
+.c-7  {position: absolute; left: 58.33%;}
+.c-8  {position: absolute; left: 66.66%;}
+.c-9  {position: absolute; left: 75%;}
+.c-10 {position: absolute; left: 83.33%;}
+.c-11 {position: absolute; left: 91.66%;}
+
+
+.r-0  { top: 0;}
+.r-1  { top: 8.33%;}
+.r-2  { top: 16.66%;}
+.r-3  { top: 25%;}
+.r-4  { top: 33.33%;}
+.r-5  { top: 41.66%;}
+.r-6  { top: 50%;}
+.r-7  { top: 58.33%;}
+.r-8  { top: 66.66%;}
+.r-9  { top: 75%;}
+.r-10 { top: 83.33%;}
+.r-11 { top: 91.66%;}
+
+.width-1 {width: 8.33%;}
+.width-2 {width: 16.66%;}
+.width-3 {width: 25%;}
+.width-4 {width: 33.33%;}
+.width-5 {width: 41.66%;}
+.width-6 {width: 50%;}
+.width-7 {width: 58.33%;}
+.width-8 {width: 66.66%;}
+.width-9 {width: 75%;}
+.width-10 {width: 83.33%;}
+.width-11 {width: 91.66%;}
+.width-12 {width: 100%;}
+
+.height-1 {height: 8.33%;}
+.height-2 {height: 16.66%;}
+.height-3 {height: 25%;}
+.height-4 {height: 33.33%;}
+.height-5 {height: 41.66%;}
+.height-6 {height: 50%;}
+.height-7 {height: 58.33%;}
+.height-8 {height: 66.66%;}
+.height-9 {height: 75%;}
+.height-10 {height: 83.33%;}
+.height-11 {height: 91.66%;}
+.height-12 {height: 100%;}
+
+

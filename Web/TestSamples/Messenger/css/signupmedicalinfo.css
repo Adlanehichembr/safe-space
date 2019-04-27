@@ -1,0 +1,26 @@
+.labelBox{
+    width: 80%;
+    padding: 2%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: fantasy;
+    font-size: 150%;
+    text-align: right;
+ }
+
+.menuBox{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: fantasy;
+    font-size: 100%;
+    direction: ltr;
+}
+
+.textareaBox{
+    width: 80%;
+    margin-right: 10%;
+    font-family: fantasy;
+    font-size: 100%;
+    
+}
