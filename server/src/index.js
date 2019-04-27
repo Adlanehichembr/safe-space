@@ -15,14 +15,40 @@ app.get('/ping', (req, res) => {
 app.post('/message', async (req, res) => {
   const {context, output} = await assistant.query(req.body.context || {}, req.body.message);
 
-  const texts = output.generic
+  res.json({
+    context,
+    texts:   extractTexts(output),
+    buttons: extractButtons(output),
+    images:  extractImages(output),
+  });
+});
+
+// -- Start server --
+const PORT = config.get('port');
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
+
+// --- Helper functions ---
+
+function extractTexts(watsonOutput) {
+  return watsonOutput.generic
     .filter(o => o.response_type === 'text')
     .map(o => o.text);
+}
 
-  const buttonOptions = output.generic
-    .filter(o => o.response_type === 'option');
+function extractButtons(watsonOutput) {
+  const watsonOptionsResponse = watsonOutput.generic
+    .filter(o => o.response_type === 'option')[0];
 
-  const images = output.generic
+  const buttons = watsonOptionsResponse && watsonOptionsResponse.options ?
+    watsonOptionsResponse.options.map(o => ({label: o.label, value: o.value.input.text}))
+    : null;
+
+  return buttons;
+}
+
+function extractImages(watsonOutput) {
+  return watsonOutput.generic
     .filter(o => o.response_type === 'image')
     .map(img => {
       const desc  = img.description;
@@ -33,8 +59,8 @@ app.post('/message', async (req, res) => {
         return {
           title: 'Human Rights Watch',
           photo: 'http://poat.org/wp-content/uploads/2013/09/Assistance-2.jpg',
-          text: 'Defending human rights worldwide',
-          link: 'https://www.hrw.org/'
+          text:  'Defending human rights worldwide',
+          link:  'https://www.hrw.org/',
         };
       }
 
@@ -42,17 +68,7 @@ app.post('/message', async (req, res) => {
         title: img.title,
         photo: img.source,
         text:  desc.substring(0, limit).trim(),
-        link:  desc.substring(limit + 1).trim()
+        link:  desc.substring(limit + 1).trim(),
       };
     });
-
-  const buttons = buttonOptions && buttonOptions.length ?
-    buttonOptions.map(o => o.options.map(p => ({label: p.label, value: p.value.input.text})))[0]
-    : null;
-
-  res.json({context, texts, buttons, images});
-});
-
-// -- Start server --
-const PORT = config.get('port');
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+}
