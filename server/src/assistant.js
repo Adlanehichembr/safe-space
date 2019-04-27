@@ -5,7 +5,7 @@ const AssistantV1 = require('ibm-watson/assistant/v1');
 const assistant = new AssistantV1({
   version:    config.get('watson.version'),
   iam_apikey: config.get('watson.apiKey'),
-  url:        config.get('watson.url')
+  url:        config.get('watson.url'),
 });
 
 module.exports = {
@@ -14,10 +14,8 @@ module.exports = {
 
 function query(context, message) {
   return assistant.message({
-    workspace_id: config.get('watson.workspaceId'),
     context,
-    input: {
-      text: message
-    }
+    input:        { text: message },
+    workspace_id: config.get('watson.workspaceId'),
   });
 }

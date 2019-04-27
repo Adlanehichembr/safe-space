@@ -1,0 +1,21 @@
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    "semi": "error",
+    "no-console": "warn",
+    "key-spacing": [ 2, { "align": "value" } ],
+    "comma-dangle": [ "error", "always-multiline" ],
+    "no-trailing-spaces": "error",
+    "indent": [ "error", 2 ]
+  }
+}

@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "node .",
-    "start:dev": "nodemon --inspect ."
+    "start:dev": "nodemon --inspect .",
+    "lint": "eslint src/"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "ibm-watson": "^4.0.2"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
     "nodemon": "^1.18.11"
   }
 }
