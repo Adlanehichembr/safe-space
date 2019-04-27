@@ -12,9 +12,10 @@ module.exports = {
   query,
 };
 
-function query(message) {
+function query(context, message) {
   return assistant.message({
     workspace_id: config.get('watson.workspaceId'),
+    context,
     input: {
       text: message
     }

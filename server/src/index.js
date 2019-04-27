@@ -8,14 +8,8 @@ const app     = express();
 
 app.use(express.json());
 
-app.get('/', async (req, res) => {
-  const msg = await assistant.query('what is my balance?');
-  console.log(JSON.stringify(msg));
-  res.json(msg);
-});
-
 app.post('/message', async (req, res) => {
-  const msg = await assistant.query(req.body.message);
+  const msg = await assistant.query(req.body.context || {}, req.body.message);
   res.json(msg);
 });
 
