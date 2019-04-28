@@ -9,6 +9,7 @@ RUN npm -q install --production
 
 COPY src/ ./src/
 COPY config/ ./config/
+COPY public/ ./public/
 
 ENV PORT 80
 EXPOSE $PORT
