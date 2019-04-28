@@ -22,3 +22,7 @@ Students:
  * Tobias Lichtig, toblich@gmail.com, Argentina, UBA
 
 Presentation: https://docs.google.com/presentation/d/103QC1DYH1OiySO4u_GwH84p1UX7ek5r1JGxNIo4OLNw/edit?usp=sharing
+# watch the project demo version of ibm watson : 
+https://www.youtube.com/watch?v=gpQ1ih3iFGk
+# the live demo of the app on ibm watson : 
+https://assistant-chat-eu-gb.watsonplatform.net/web/public/81b4f78b-d731-4a5c-8202-e7c723e8cb6a
