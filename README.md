@@ -21,5 +21,4 @@ Students:
  * Sean Sullivan,  sean_sullivan@college.harvard.edu, USA, Harvard University
  * Tobias Lichtig, toblich@gmail.com, Argentina, UBA
 
-Presentation: https://docs.google.com/presentation/d/1nEb8q-DEZMhb_QxDfels4NpbgqBIAZt2ZqWRkLOAOKg/edit
-
+Presentation: https://docs.google.com/presentation/d/103QC1DYH1OiySO4u_GwH84p1UX7ek5r1JGxNIo4OLNw/edit?usp=sharing
